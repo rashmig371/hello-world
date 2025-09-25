@@ -9,6 +9,9 @@
   <button onclick="openInBrowser()">Open in Browser</button>
 
   <script>
+    
+  window.location = "microsoft-edge:https://m365.cloud.microsoft/"; // Try to open your app
+
     function openInBrowser() {
       const url = window.location.href;
       window.open(url, '_system'); // For Cordova/Capacitor apps
