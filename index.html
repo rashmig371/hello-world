@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+!DOCTYPE html>
 <html>
 <head>
   <title>Open in Browser</title>
@@ -6,5 +7,13 @@
 </head>
 <body>
   <h2>Click the button below to open this page in your mobile browser</h2>
+  <button onclick="openInBrowser()">Open in Browser</button>
+
+  <script>
+    function openInBrowser() {
+      const url = window.location.href;
+      window.open(url, '_system'); // For Cordova/Capacitor apps
+    }
+  </script>
 </body>
 </html>
