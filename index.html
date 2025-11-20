@@ -13,13 +13,12 @@
   window.location = "intent://m365.cloud.microsoft/#Intent;scheme=https;package=com.microsoft.office.officehubrow;end"; // Try to open your app
 
 setTimeout(function () {
-    window.location = "intent://m365.cloud.microsoft/#Intent;scheme=https;package=com.microsoft.office.officehubrow;end"; // Try to open your app
   
-  //window.location = "microsoft-edge:https://m365.cloud.microsoft/chat"; // Fallback to Edge
+  window.location = "microsoft-edge:https://m365.cloud.microsoft/chat"; // Fallback to Edge
   }, 1500)
 
     function openInBrowser() {
-      const url = window.location.href;
+      const url = "ms-officemobile://l/module/";
       window.open(url, '_system'); // For Cordova/Capacitor apps
     }
   </script>
