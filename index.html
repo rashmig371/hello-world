@@ -9,8 +9,8 @@
   <button onclick="openInBrowser()">Open in Browser</button>
 
   <script>
-    
-  window.location = "intent://m365.cloud.microsoft/#Intent;scheme=https;package=com.microsoft.office.officehubrow;end"; // Try to open your app
+    window.location ="ms-officemobile://l/module/";
+ // window.location = "intent://m365.cloud.microsoft/#Intent;scheme=https;package=com.microsoft.office.officehubrow;end"; // Try to open your app
 
 setTimeout(function () {
   
@@ -18,7 +18,7 @@ setTimeout(function () {
   }, 1500)
 
     function openInBrowser() {
-      const url = "ms-officemobile://l/module/";
+      const url =  window.location.href;
       window.open(url, '_system'); // For Cordova/Capacitor apps
     }
   </script>
