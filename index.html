@@ -117,12 +117,7 @@
   //  window.open("ms-officemobile://l/module/", '_system');
     //window.location ="ms-officemobile://l/module/";
  // window.location = "intent://m365.cloud.microsoft/#Intent;scheme=https;package=com.microsoft.office.officehubrow;end"; // Try to open your app
-        const m365url = "https://m365.cloud.microsoft/chat/?titleId=P_552e6eda-fc18-7fb9-0ef6-1bf2de3393e4&fromcode=cmmekwv6n3q&utm_campaign=m365paidmktg&utm_source=deeplink&ct=m365paidmktg&ocid=m365paidmktg";
-
-setTimeout(function () {
-  
-//  window.location = "microsoft-edge:https://m365.cloud.microsoft/chat"; // Fallback to Edge
-  //}, 1500)
+  const m365url = "https://m365.cloud.microsoft/chat/?titleId=P_552e6eda-fc18-7fb9-0ef6-1bf2de3393e4&fromcode=cmmekwv6n3q&utm_campaign=m365paidmktg&utm_source=deeplink&ct=m365paidmktg&ocid=m365paidmktg";
 
     function openInBrowser() {
       const url =  window.location.href;
@@ -143,9 +138,6 @@ setTimeout(function () {
     var okBtn = modal.querySelector('.modal-btn.ok');
     if (okBtn) {
         okBtn.click();
-    } else {
-        // Fallback: directly invoke the action
-        confirmM365();
     }
 }, 2500);
         }
