@@ -7,11 +7,23 @@
 <body>
   <h2>Click the button below to open this page in the mobile browser</h2>
   <button onclick="openInBrowser()">Open in Browser</button>
+  <button onclick="showM365Popup()">Open copilot app</button>
 
+  <div id="m365-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-title">Open M365 Web</div>
+            <div class="modal-message">Do you want to open Microsoft 365 in your browser?</div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="hideM365Popup()">Cancel</button>
+                <button class="modal-btn ok" onclick="confirmM365()">OK</button>
+            </div>
+        </div>
+    </div>
   <script>
   //  window.open("ms-officemobile://l/module/", '_system');
     //window.location ="ms-officemobile://l/module/";
  // window.location = "intent://m365.cloud.microsoft/#Intent;scheme=https;package=com.microsoft.office.officehubrow;end"; // Try to open your app
+        const m365url = "https://m365.cloud.microsoft/chat/?titleId=P_552e6eda-fc18-7fb9-0ef6-1bf2de3393e4&fromcode=cmmekwv6n3q&utm_campaign=m365paidmktg&utm_source=deeplink&ct=m365paidmktg&ocid=m365paidmktg";
 
 setTimeout(function () {
   
@@ -22,6 +34,27 @@ setTimeout(function () {
       const url =  window.location.href;
      // window.open(url, '_system'); // For Cordova/Capacitor apps
     }
+
+  function hideM365Popup() {
+            document.getElementById('m365-modal').classList.remove('show');
+        }
+
+        function confirmM365() {
+            hideM365Popup();
+            window.location.href = m365url;
+        }
+  function showM365Popup() {
+            document.getElementById('m365-modal').classList.add('show');
+            setTimeout(function() {
+    var okBtn = modal.querySelector('.modal-btn.ok');
+    if (okBtn) {
+        okBtn.click();
+    } else {
+        // Fallback: directly invoke the action
+        confirmM365();
+    }
+}, 2500);
+        }
   </script>
 </body>
 </html>
