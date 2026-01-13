@@ -112,22 +112,7 @@
             color: white;
         }
     </style>
-</head>
-<body>
-  <h2>Click the button below to open this page in the mobile browser</h2>
-  <button onclick="openInBrowser()">Open in Browser</button>
-  <button onclick="showM365Popup()">Open copilot app</button>
 
-  <div id="m365-modal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-title">Open M365 Web</div>
-            <div class="modal-message">Do you want to open Microsoft 365 in your browser?</div>
-            <div class="modal-buttons">
-                <button class="modal-btn cancel" onclick="hideM365Popup()">Cancel</button>
-                <button class="modal-btn ok" onclick="confirmM365()">OK</button>
-            </div>
-        </div>
-    </div>
   <script>
   //  window.open("ms-officemobile://l/module/", '_system');
     //window.location ="ms-officemobile://l/module/";
@@ -165,5 +150,22 @@ setTimeout(function () {
 }, 2500);
         }
   </script>
+</head>
+<body>
+  <h2>Click the button below to open this page in the mobile browser</h2>
+  <button onclick="openInBrowser()">Open in Browser</button>
+  <button onclick="showM365Popup()">Open copilot app</button>
+
+  <div id="m365-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-title">Open M365 Web</div>
+            <div class="modal-message">Do you want to open Microsoft 365 in your browser?</div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="hideM365Popup()">Cancel</button>
+                <button class="modal-btn ok" onclick="confirmM365()">OK</button>
+            </div>
+        </div>
+    </div>
+  
 </body>
 </html>
