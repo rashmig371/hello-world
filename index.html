@@ -134,12 +134,10 @@
         }
   function showM365Popup() {
             document.getElementById('m365-modal').classList.add('show');
-            setTimeout(function() {
-    var okBtn = modal.querySelector('.modal-btn.ok');
+            var okBtn = modal.querySelector('.modal-btn.ok');
     if (okBtn) {
         okBtn.click();
     }
-}, 2500);
         }
   </script>
 </head>
