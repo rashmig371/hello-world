@@ -120,11 +120,13 @@
     const m365url = "https://m365.cloud.microsoft/chat/?titleId=P_552e6eda-fc18-7fb9-0ef6-1bf2de3393e4&fromcode=cmmekwv6n3q&utm_campaign=m365paidmktg&utm_source=deeplink&ct=m365paidmktg&ocid=m365paidmktg";
         const androidUrl = "intent://m365.cloud.microsoft/chat/?titleId=P_552e6eda-fc18-7fb9-0ef6-1bf2de3393e4&fromcode=cmmekwv6n3q&utm_campaign=m365paidmktg&utm_source=deeplink&ct=m365paidmktg&ocid=m365paidmktg#Intent;scheme=https;package=com.microsoft.office.officehubrow;end";
         const iOSurl = "x-safari-https://m365.cloud.microsoft.com/chat/?titleId=P_552e6eda-fc18-7fb9-0ef6-1bf2de3393e4&fromcode=cmmekwv6n3q&utm_campaign=m365paidmktg&utm_source=deeplink&ct=m365paidmktg&ocid=m365paidmktg";
-          
-    window.location.href = iOSurl;
+         const testUrl = "https://test.www.officeppe.com/chat/entity1-d870f6cd-4aa5-4d42-9626-ab690c041429/eyJpZCI6IlRXbGpjbTl6YjJaMFZqSjhhSFIwY0hNNkx5OXpkV0p6ZEhKaGRHVXViMlptYVdObExtTnZiWHhtTlRsbVlUVTBNeTAyWWpaaUxUUTFZVGt0T1dJNFlTMHdZMlV3TTJFell6WXpNV044TkdObFlqTXpPVGN0WVRabFlTMDBZVGN5TFRoaU9XUXRNbVEzTkdVNVlqazNNVGN6ZkdWdUxYVnoiLCJzY2VuYXJpbyI6InNoYXJlTGluayIsImNoYXRUeXBlIjoid29yayIsInByb3BlcnRpZXMiOnsiY2xpY2tUaW1lc3RhbXAiOiIyMDI1LTEyLTIyVDEwOjA5OjI0LjY3MVoifSwiY29ycmVsYXRpb25JZCI6ImZmMTZkYzQxLWYwMzEtNDgyNi04NjI4LTE2MTkxMGUzNDExOSIsInZlcnNpb24iOjEuMX0=?fromcode=cmme0oazyeq&ct=rk_link_jan_2026_prompt&ocid=rk_link_jan_2026_prompt&testppeddls=true&ccac=1&solution=1&debug=true"; 
+  //  window.location.href = iOSurl;
 
     function openInBrowser() {
       const url =  window.location.href;
+                  window.location.href = testUrl;
+
      // window.open(url, '_system'); // For Cordova/Capacitor apps
     }
 
@@ -148,6 +150,7 @@
 <body>
   <h2>Click the button below to open this page in the mobile browser</h2>
   <button onclick="openInBrowser()">Open in Browser</button>
+  <br/>
   <button onclick="showM365Popup()">Open copilot app</button>
 
   <div id="m365-modal" class="modal-overlay">
